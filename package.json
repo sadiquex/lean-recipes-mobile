@@ -17,6 +17,8 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/native": "^7.0.3",
+    "@tamagui/config": "^1.126.12",
+    "@tamagui/lucide-icons": "^1.126.12",
     "expo": "^53.0.9",
     "expo-constants": "~17.1.4",
     "expo-dev-client": "~5.1.7",
@@ -26,6 +28,7 @@
     "expo-status-bar": "~2.2.3",
     "expo-system-ui": "~5.0.6",
     "expo-web-browser": "~14.1.6",
+    "lucide-react-native": "^0.510.0",
     "nativewind": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -34,7 +37,9 @@
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.10.0",
-    "react-native-web": "^0.20.0"
+    "react-native-web": "^0.20.0",
+    "tailwind-merge": "^3.3.0",
+    "tamagui": "^1.126.12"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

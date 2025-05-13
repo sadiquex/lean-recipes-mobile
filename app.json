@@ -3,7 +3,6 @@
     "name": "LeanRecipes",
     "slug": "LeanRecipes",
     "version": "1.0.0",
-
     "scheme": "LeanRecipes",
     "web": {
       "bundler": "metro",
@@ -21,28 +20,34 @@
     ],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sadique-x.LeanRecipes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.sadique_x.LeanRecipes"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7aa57bfe-28ca-4eba-9a45-d238a2d901ce"
       }
     }
   }

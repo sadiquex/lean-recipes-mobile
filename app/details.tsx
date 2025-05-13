@@ -1,16 +1,15 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
-
 import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Text } from 'react-native';
 
 export default function Details() {
-  const { name } = useLocalSearchParams();
+  const { name } = useLocalSearchParams<{ name: string }>();
 
   return (
     <>
       <Stack.Screen options={{ title: 'Details' }} />
       <Container>
-        <ScreenContent path="screens/details.tsx" title={`Showing details for user ${name}`} />
+        <Text>Hello, {name}!</Text>
       </Container>
     </>
   );
