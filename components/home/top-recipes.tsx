@@ -11,7 +11,7 @@ export default function TopRecipes() {
         <CustomText variant="body">See All</CustomText>
       </View>
 
-      {/* the bottom part of the list isn't showing, but the top part is */}
+      {/* the bottom part of the list isn't showing,  but the top part is */}
       <FlatList
         key="two-column-list"
         data={[{ id: '1' }, { id: '2' }, { id: '3' }, { id: '4' }, { id: '5' }, { id: '6' }]}
