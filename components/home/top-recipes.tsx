@@ -17,7 +17,7 @@ export default function TopRecipes() {
         data={[{ id: '1' }, { id: '2' }, { id: '3' }, { id: '4' }, { id: '5' }, { id: '6' }]}
         renderItem={({ item }) => (
           <View className="flex-1 p-1 py-8">
-            <RecipeCard />
+            <RecipeCard id={item.id} />
           </View>
         )}
         keyExtractor={(item) => item.id}
