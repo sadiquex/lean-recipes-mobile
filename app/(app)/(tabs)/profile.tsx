@@ -5,7 +5,7 @@ export default function ProfileScreen() {
   return (
     <Container>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20 }}>Your Recipes</Text>
+        <Text style={{ fontSize: 20 }}>Profile</Text>
       </View>
     </Container>
   );

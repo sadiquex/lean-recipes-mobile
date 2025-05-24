@@ -1,14 +1,19 @@
-import { FlatList, View } from 'react-native';
+import { FlatList, View, Pressable } from 'react-native';
 import React from 'react';
 import CustomText from '../text';
 import RecipeCard from '../recipe-card';
+import { router } from 'expo-router';
 
 export default function TopRecipes() {
   return (
     <View className="gap-4">
       <View className="flex flex-row items-center justify-between">
         <CustomText variant="title">Top Recipes</CustomText>
-        <CustomText variant="body">See All</CustomText>
+        <Pressable onPress={() => router.push('/recipes')}>
+          <CustomText variant="body" className="text-[#095C37]">
+            See All
+          </CustomText>
+        </Pressable>
       </View>
 
       {/* the bottom part of the list isn't showing,  but the top part is */}
