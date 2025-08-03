@@ -35,7 +35,10 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sadique-x.LeanRecipes"
+      "bundleIdentifier": "com.sadique-x.LeanRecipes",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
