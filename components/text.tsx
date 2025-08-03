@@ -18,15 +18,15 @@ interface TextComponentProps extends TextProps {
 }
 
 const variantStyles: Record<TypographyVariant, string> = {
-  title: 'text-2xl font-bold',
-  subtitle: 'text-xl font-semibold',
-  'subtitle-primary': 'text-xl font-semibold text-primary',
-  body: 'text-base',
-  caption: 'text-sm font-medium',
-  button: 'text-xl text-primary font-semibold text-white text-center',
-  display: 'text-3xl font-bold',
-  'body-primary': 'text-base text-primary',
-  'caption-primary': 'text-sm text-primary font-medium',
+  title: 'text-2xl font-sora-bold',
+  subtitle: 'text-xl font-sora-semi-bold',
+  'subtitle-primary': 'text-xl font-sora-semi-bold text-primary',
+  body: 'text-base font-sora-regular',
+  caption: 'text-sm font-sora-medium',
+  button: 'text-xl text-primary font-sora-semi-bold text-white text-center',
+  display: 'text-3xl font-sora-bold',
+  'body-primary': 'text-base text-primary font-sora-regular',
+  'caption-primary': 'text-sm text-primary font-sora-medium',
 };
 
 const CustomText = ({ variant = 'body', className, children, ...props }: TextComponentProps) => {

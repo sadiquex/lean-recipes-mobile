@@ -3,6 +3,8 @@ import { Stack, SplashScreen } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { useRouter, useSegments } from 'expo-router';
 import { View } from 'react-native';
+import { useFonts } from 'expo-font';
+import { fontConfig } from '~/utils/font-family';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -10,10 +12,12 @@ SplashScreen.preventAutoHideAsync();
 // This is the main layout of the app
 // It wraps your pages with the providers they need
 export default function RootLayout() {
+  const [loaded] = useFonts(fontConfig);
+
   const segments = useSegments();
   const router = useRouter();
   const [isReady, setIsReady] = useState(false);
-  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState(true);
+  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState(false);
 
   useEffect(() => {
     // Perform any initialization here
@@ -57,7 +61,7 @@ export default function RootLayout() {
     SplashScreen.hideAsync();
   }, [isReady, segments, hasCompletedOnboarding]);
 
-  if (!isReady) {
+  if (!isReady || !loaded) {
     return null; // or a loading screen if you prefer
   }
 
