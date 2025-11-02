@@ -135,8 +135,8 @@ const AddRecipeForm = () => {
       {/* ingredients */}
       <View className="gap-2">
         <CustomText variant="subtitle">Ingredients</CustomText>
-        {[1, 2, 3].map((item) => (
-          <View key={item} className="flex-row items-center gap-2">
+        {[1, 2, 3].map((item, i) => (
+          <View key={i} className="flex-row items-center gap-2">
             <TextInput
               placeholder="e.g. 1 cup of rice"
               className="flex-1 rounded-lg border border-gray-300 p-3"
@@ -147,7 +147,7 @@ const AddRecipeForm = () => {
           </View>
         ))}
         {/* green outlined button to add more ingredients */}
-        <Pressable className="border-primary flex-row items-center justify-center gap-2 rounded-lg border p-3">
+        <Pressable className="flex-row items-center justify-center gap-2 rounded-lg border border-primary p-3">
           <CustomText variant="body-primary">+ Add Ingredient</CustomText>
         </Pressable>
       </View>
@@ -155,10 +155,10 @@ const AddRecipeForm = () => {
       {/* directions */}
       <View className="gap-2">
         <CustomText variant="subtitle">Directions</CustomText>
-        {[1, 2, 3].map((item) => (
-          <>
+        {[1, 2, 3].map((item, i) => (
+          <View key={i} className="gap-2">
             <CustomText variant="subtitle">0{item}</CustomText>
-            <View key={item} className="flex-row items-center gap-2">
+            <View className="flex-row items-center gap-2">
               <TextInput
                 placeholder="Add another step"
                 className="flex-1 rounded-lg border border-gray-300 p-3"
@@ -167,10 +167,10 @@ const AddRecipeForm = () => {
                 <Ionicons name="trash-outline" size={26} color="black" />
               </Pressable>
             </View>
-          </>
+          </View>
         ))}
         {/* green outlined button to add more ingredients */}
-        <Pressable className="border-primary flex-row items-center justify-center gap-2 rounded-lg border p-3">
+        <Pressable className="flex-row items-center justify-center gap-2 rounded-lg border border-primary p-3">
           <CustomText variant="body-primary">+ Add Step</CustomText>
         </Pressable>
       </View>

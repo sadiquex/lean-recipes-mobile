@@ -3,7 +3,7 @@
     "name": "LeanRecipes",
     "slug": "LeanRecipes",
     "version": "1.0.0",
-    "scheme": "LeanRecipes",
+    "scheme": ["leanrecipes"],
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -30,9 +30,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.sadique-x.LeanRecipes",
@@ -52,6 +50,12 @@
       "eas": {
         "projectId": "7aa57bfe-28ca-4eba-9a45-d238a2d901ce"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7aa57bfe-28ca-4eba-9a45-d238a2d901ce"
     }
   }
 }

@@ -1,5 +1,7 @@
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import * as Haptics from 'expo-haptics';
+import { TouchableOpacity } from 'react-native';
 
 export default function TabsLayout() {
   return (
@@ -9,19 +11,27 @@ export default function TabsLayout() {
         tabBarInactiveTintColor: '#aeb2b8',
         tabBarShowLabel: false,
         headerShown: false,
+        tabBarButton: (props) => {
+          const { children, onPress, ...otherProps } = props;
+          return (
+            <TouchableOpacity
+              {...(otherProps as any)}
+              activeOpacity={0.7}
+              onPress={(e) => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                onPress?.(e);
+              }}
+              style={otherProps.style}>
+              {children}
+            </TouchableOpacity>
+          );
+        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />,
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color, size }) => <Ionicons name="person" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
